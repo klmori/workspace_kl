@@ -1,4 +1,4 @@
-import { Controller, Get ,Post} from '@nestjs/common';
+import { Body, Controller, Get ,HttpCode,Param,Post} from '@nestjs/common';
 
 @Controller('property')
 export class PropertyController {
@@ -6,9 +6,19 @@ export class PropertyController {
     findall(){
         return "All Products"
     }
+    // @Get(":id")
+    // getData(@Param("id") id: string){
+    //     return id
+    // }
+
+    @Get(":id/:data")
+    getAllId(@Param()id){
+        return id
+    }
 
     @Post()
-    Create(){
-        return "This will create all property"
+    @HttpCode(202)
+    Create(@Body()body){
+        return body
     }
 }
