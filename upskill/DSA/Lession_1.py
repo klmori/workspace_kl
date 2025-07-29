@@ -69,4 +69,9 @@ def frequency(arr):
     print(res)
 
 
-frequency([1,3,5,2,1,3,4])
+# frequency([1,3,5,2,1,3,4])
+
+
+
+def countNumList(listarry, num):
+    pass
